@@ -103,6 +103,7 @@ a. 사전예약 랜딩 페이지
 
 아래는 랜딩 페이지에 넣어 주셔야 하는 예제 코드입니다.
 
+```javascript
 <script type="text/javascript" src="//s3.ap-northeast-2.amazonaws.com/vegas-kor-o/sdk/web/vegastracker.min.js"></script>
 <script type="text/javascript">
     var tracker = new VegasTracker();
@@ -111,7 +112,7 @@ a. 사전예약 랜딩 페이지
     tracker.firstLanding();
     tracker.open();
 </script>
-
+```
 
 b. 사전예약 전환 완료 페이지
 
@@ -121,7 +122,7 @@ b. 사전예약 전환 완료 페이지
 
 더불어, 사용자 식별자를 중복으로 보내서는 안됩니다. 즉, 동일한 사용자가 2번 이상 전환 완료하더라도 최초 1번의 전환만 보내져야 합니다.
 
-
+```javascript
 <script type="text/javascript" src="//s3.ap-northeast-2.amazonaws.com/vegas-kor-o/sdk/web/sha1.js"></script>
 <script type="text/javascript" src="//s3.ap-northeast-2.amazonaws.com/vegas-kor-o/sdk/web/vegastracker.min.js"></script>
 <script type="text/javascript">
@@ -142,7 +143,7 @@ b. 사전예약 전환 완료 페이지
     });
 */
 </script>
-
+```
 
 
 
@@ -155,6 +156,7 @@ a. 회원가입 랜딩 페이지
 
 아래는 랜딩 페이지에 넣어 주셔야 하는 예제 코드입니다.
 
+```javascript
 <script type="text/javascript" src="//s3.ap-northeast-2.amazonaws.com/vegas-kor-o/sdk/web/vegastracker.min.js"></script>
 <script type="text/javascript">
     var tracker = new VegasTracker();
@@ -163,7 +165,7 @@ a. 회원가입 랜딩 페이지
     tracker.firstLanding();
     tracker.open();
 </script>
-
+```
 
 b. 회원가입 전환 완료 페이지
 
@@ -173,7 +175,7 @@ b. 회원가입 전환 완료 페이지
 
 더불어, 사용자 식별자를 중복으로 보내서는 안됩니다. 즉, 동일한 사용자가 2번 이상 전환 완료하더라도 최초 1번의 전환만 보내져야 합니다.
 
-
+```javascript
 <script type="text/javascript" src="//s3.ap-northeast-2.amazonaws.com/vegas-kor-o/sdk/web/sha1.js"></script>
 <script type="text/javascript" src="//s3.ap-northeast-2.amazonaws.com/vegas-kor-o/sdk/web/vegastracker.min.js"></script>
 <script type="text/javascript">
@@ -195,7 +197,7 @@ b. 회원가입 전환 완료 페이지
 */
  
 </script>
-
+```
 
 
 
@@ -208,6 +210,7 @@ a. 상품구매 랜딩 페이지
 
 아래는 랜딩 페이지에 넣어 주셔야 하는 예제 코드입니다.
 
+```javascript
 <script type="text/javascript" src="//s3.ap-northeast-2.amazonaws.com/vegas-kor-o/sdk/web/vegastracker.min.js"></script>
 <script type="text/javascript">
     var tracker = new VegasTracker();
@@ -216,7 +219,7 @@ a. 상품구매 랜딩 페이지
     tracker.firstLanding();
     tracker.open();
 </script>
-
+```
 
 b. 상품구매 전환 완료 페이지
 
@@ -224,7 +227,7 @@ b. 상품구매 전환 완료 페이지
 아래 예제 코드와 같이 사용자 개인정보 보호를 위해 SHA1 Hash 된 값으로 처리하는 것을 권장합니다.
 
 
-
+```javascript
 <script type="text/javascript" src="//s3.ap-northeast-2.amazonaws.com/vegas-kor-o/sdk/web/sha1.js"></script>
 <script type="text/javascript" src="//s3.ap-northeast-2.amazonaws.com/vegas-kor-o/sdk/web/vegastracker.min.js"></script>
 <script type="text/javascript">
@@ -253,11 +256,8 @@ b. 상품구매 전환 완료 페이지
         location.href = "이동할 페이지";
     });
 */
- 
- 
- 
 </script>
-
+```
 
 
 
@@ -272,6 +272,8 @@ CPC 캠페인의 경우 ADMAX 와 광고주 간 협의에 따라 사용자가 �
 
 아래는 랜딩 페이지에 초기화 코드와 더불어 전환 처리 코드를 넣어 주시는 예제 코드입니다.
 
+
+```javascript
 <script type="text/javascript" src="//s3.ap-northeast-2.amazonaws.com/vegas-kor-o/sdk/web/vegastracker.min.js"></script>
 <script type="text/javascript">
     var tracker = new VegasTracker();
@@ -281,7 +283,7 @@ CPC 캠페인의 경우 ADMAX 와 광고주 간 협의에 따라 사용자가 �
     tracker.open();
     tracker.triggerCpc();
 </script>
-
+```
 
 위의 예제 코드는 사용자가 CPC 랜딩 페이지에 일정 시간을 머물렀을 때 ADMAX 로 Postback 을 보내고 끝나게 됩니다만
 
@@ -289,6 +291,7 @@ CPC 캠페인의 경우 ADMAX 와 광고주 간 협의에 따라 사용자가 �
 
 이 경우에는 아래 예제 코드와 같이 Postback 을 발송한 시점에 event 를 받아 확인할 수 있습니다.
 
+```javascript
 <script type="text/javascript" src="//s3.ap-northeast-2.amazonaws.com/vegas-kor-o/sdk/web/vegastracker.min.js"></script>
 <script type="text/javascript">
  
@@ -310,9 +313,6 @@ CPC 캠페인의 경우 ADMAX 와 광고주 간 협의에 따라 사용자가 �
         location.href = "이동할 페이지";
     });
 */
- 
- 
- 
 </script>
-
+```
 
